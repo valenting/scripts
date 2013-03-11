@@ -1,0 +1,8 @@
+[
+	{  
+        "keys": ["ctrl+shift+e"], "command": "p4_edit"  
+	},
+	{  
+        "keys": ["ctrl+alt+q"], "command": "ro_change"  
+	}
+]
