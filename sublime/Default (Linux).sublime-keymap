@@ -1,8 +1,41 @@
 [
-	{  
-        "keys": ["ctrl+shift+e"], "command": "p4_edit"  
+	{	// Edit file in perforce
+		"keys": ["ctrl+shift+e"], "command": "p4_edit"
 	},
-	{  
-        "keys": ["ctrl+alt+q"], "command": "ro_change"  
+	{	// Toggle read-only
+		"keys": ["ctrl+alt+q"], "command": "ro_change"
+	},
+	{	// igrep - search within project
+		"keys": ["ctrl+alt+u"], "command" : "i_grep"
+	},
+	{	// Expand left group
+		"keys": ["alt+["],
+		"command": "set_layout",
+		"args":
+			{
+				"cols": [0.0, 0.9, 1.0],
+				"rows": [0.0, 1.0],
+				"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+			}
+	},
+	{	// Expand right group
+		"keys": ["alt+]"],
+		"command": "set_layout",
+		"args":
+			{
+				"cols": [0.0, 0.1, 1.0],
+				"rows": [0.0, 1.0],
+				"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+			}
+	},
+	{	// Two equal groups
+		"keys": ["alt+\\"],
+		"command": "set_layout",
+		"args":
+			{
+				"cols": [0.0, 0.5, 1.0],
+				"rows": [0.0, 1.0],
+				"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+			}
 	}
 ]

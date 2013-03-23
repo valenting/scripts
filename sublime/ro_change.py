@@ -9,7 +9,7 @@ class ro_changeCommand(sublime_plugin.TextCommand):
 		mode = os.stat(self.view.file_name()).st_mode
 		if (writable(mode)):
 			os.chmod(self.view.file_name(),  mode&(~stat.S_IWRITE))
-			print "UNLOCK "+ self.view.file_name()
+			print "LOCK "+ self.view.file_name()
 		else:
 			os.chmod(self.view.file_name(),  mode|stat.S_IWRITE)
-			print "LOCK "+ self.view.file_name()
+			print "UNLOCK "+ self.view.file_name()
